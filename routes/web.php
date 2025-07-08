@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SysUserController;
 use App\Livewire\Prodlist;
+use App\Livewire\ProductCreate;
 
 Route::get('/login', [SysUserController::class, 'login'])->name('login');
 Route::post('/authenticate', [SysUserController::class, 'authenticate'])->name('authenticate');
@@ -20,6 +21,7 @@ Route::middleware('auth')->group(function() {
 });
 
 Route::get('/productlist', Prodlist::class);
+Route::get('/product-create', ProductCreate::class);
 
 
 
