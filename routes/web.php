@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SysUserController;
+use App\Livewire\Prodlist;
 
 Route::get('/login', [SysUserController::class, 'login'])->name('login');
 Route::post('/authenticate', [SysUserController::class, 'authenticate'])->name('authenticate');
@@ -17,6 +18,8 @@ Route::middleware('auth')->group(function() {
     Route::resource('products', ProductController::class);
     Route::match(['POST', 'GET'], '/logout', [SysUserController::class, 'logout'])->name('logout');
 });
+
+Route::get('/productlist', Prodlist::class);
 
 
 
