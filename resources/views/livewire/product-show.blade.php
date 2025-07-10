@@ -45,8 +45,7 @@
                     <div class="row">
                         <label for="image" class="col-md-4 col-form-label text-md-end text-start"><strong>Image:</strong></label>
                         <div class="col-md-6" style="line-height: 35px;">
-                            <label>{{ asset('storage/' . $product->imageurl) }}</label>
-                            <img src="{{ asset('storage/' . $product->imageurl) }}" alt="Product Image" style="max-width: 100%; height: auto;">
+                            <img src="{{ asset($product->imageurl) }}" alt="Product Image" style="max-width: 100%; height: auto;">
                         </div>
                     </div>
 
