@@ -19,6 +19,12 @@ class Prodlist extends Component
         ]);
     }
 
+    public function destroy(Product $product)
+    {
+        $product->delete();
+        
+        session()->flash('success', 'Product is deleted successfully.');
+    }
 
 
 }
