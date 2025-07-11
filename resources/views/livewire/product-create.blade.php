@@ -9,7 +9,7 @@
                         Add New Product
                     </div>
                     <div class="float-end">
-                        <a href="/productlist" class="btn btn-primary btn-sm" wire:navigate>&larr; Back</a>
+                        <a href="{{ route('productlist') }}" class="btn btn-primary btn-sm" wire:navigate>&larr; Back</a>
                     </div>
                 </div>
                 <div class="card-body">
