@@ -8,6 +8,14 @@
         <title>{{ $title ?? 'Page Title' }}</title>
     </head>
     <body>
+        <div class='container' style="text-align:right">
+            @if (Auth::check())
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit">Logout</button>
+                </form>
+            @endif
+        </div>
         {{ $slot }}
     </body>
 </html>

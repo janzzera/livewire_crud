@@ -6,7 +6,6 @@ use Livewire\Component;
 use Livewire\Attributes\Title;
 use App\Models\Product;
 use Livewire\WithFileUploads;
-use Livewire\Features\SupportRedirects\Redirector;
 
 class ProductCreate extends Component
 {
@@ -47,7 +46,7 @@ class ProductCreate extends Component
             'imageurl' => $this->imageurl,
         ]);
 
-        return redirect()->route('productlist');
+        return $this->redirectRoute('productlist', navigate: true);
     }
 
 
