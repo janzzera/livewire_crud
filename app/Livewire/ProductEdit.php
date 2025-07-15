@@ -56,6 +56,6 @@ class ProductEdit extends Component
         
         $this->product->update($validated);
 
-        return redirect()->route('productlist');
+        return $this->redirectRoute('productlist', navigate: true);
     }
 }
